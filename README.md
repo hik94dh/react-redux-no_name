@@ -1,1 +1,1 @@
-l1 - add redux, react-router
+l1 - add redux, react-router, redux-form
