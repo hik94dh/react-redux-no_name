@@ -1,6 +1,5 @@
 import { createStore, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
-import thunk from 'redux-thunk';
 import { routerMiddleware } from 'react-router-redux';
 import reducer from './reducer';
 import createSagaMiddleware from 'redux-saga';
@@ -11,7 +10,6 @@ const sagaMiddleware = createSagaMiddleware();
 const enhancer = applyMiddleware(
     sagaMiddleware,
     routerMiddleware(history),
-    thunk,
     logger,
 );
 
