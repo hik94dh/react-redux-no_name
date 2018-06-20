@@ -3,10 +3,11 @@ import { reduxForm, Field } from 'redux-form';
 
 class SignInForm extends Component {
     render() {
+        const { handleSubmit } = this.props;
         return (
             <div>
                 <h2>Sigh in</h2>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div>
                         <label>Email</label>
                         <Field name="email" component="input" />
