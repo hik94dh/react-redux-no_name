@@ -35,5 +35,10 @@
     "lint:js": "eslint .",
     "validate": "npm ls"
   },
-  "pre-commit": []
+  "pre-commit": [],
+  "devDependencies": {
+    "enzyme": "^2.9.1",
+    "react-scripts": "1.0.11",
+    "react-test-renderer": "^15.6.1"
+  }
 }

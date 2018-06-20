@@ -40,7 +40,7 @@ export function addPerson(person) {
     };
 }
 
-const addPersonSaga = function*(action) {
+export const addPersonSaga = function*(action) {
     const id = generateId();
     yield put({
         type: ADD_PERSON,

@@ -5,7 +5,7 @@ import { routerMiddleware } from 'react-router-redux';
 import reducer from './reducer';
 import createSagaMiddleware from 'redux-saga';
 import history from '../history';
-import { saga } from '../ducks/people';
+import rootSaga from './saga';
 
 const sagaMiddleware = createSagaMiddleware();
 const enhancer = applyMiddleware(
@@ -19,6 +19,6 @@ const store = createStore(reducer, enhancer);
 // для дебага
 window.store = store;
 
-sagaMiddleware.run(saga);
+sagaMiddleware.run(rootSaga);
 
 export default store;
